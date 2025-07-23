@@ -1,0 +1,48 @@
+System Description:
+    The BEM Theater System (BEMTS) will allow costumers to get movie tickets by:
+        * Viewing theaters' locations and their movie times
+            - Accessing the database of locations and movie times
+        * Selecting seats
+            - Accessing the database of theaters' map
+        * Logging into members account if customer has one, if not they have the option to create one
+            - Logging in or creating an account will access the database of user's information
+        * Paying for tickets
+            - Accessing Bank information
+            - Accessing database of user's information to consider members rewards and history
+        (past payment info, phone number, email, ect)
+        * Viewing order details and confirming
+        * Getting tickets delivered
+            - Accessing database of user's information to deliver tickets to the customer's phone
+        number &/or email
+
+Development Plan:
+    * Create databases for
+        1. Theaters' locations and movie times
+        2. Theaters' Maps and seating
+        3. User's information
+    (Dennis) (3 months)
+    * Create transitions to different steps of purchase
+        - Creating cases on which page to land on depending after a certain action
+        - Allowing costumers to transit forward or backward
+    (Orellana) (2 months)
+    * Create access to bank information
+    (Pinales)
+    * Develop a security system
+        - To protect databases and bank information
+    (Orellana) (3 months)
+    * Integrate interfaces for
+        1. Hardware
+        2. Software
+        3. Communications
+    (Pinales) (7 months)
+    * Design website
+            - Check in with client for details or preference
+    (Dennis, Orellana, Pinales) (7 months)
+    * Perform tests
+    (Dennis, Orellana, Pinales) (throughout development)
+    * Prepare the environment setup
+    (Dennis, Orellana, Pinales) (8 months)
+
+
+
+
