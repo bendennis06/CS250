@@ -1,30 +1,43 @@
 Test Plan – Movie Theater Ticket Booking System
 Purpose This test plan is created to verify and validate the functionality and integration of the Movie Ticket Booking System. It ensures that all components perform as expected under normal and faulty conditions. The plan includes unit-level, integration-level, and system-level testing.
+
 Target Components
 	•	Movie Selection Module: Handles movie listings by location, date, and time.
 	•	Login/Sign-Up Module: Manages user authentication and session state.
 	•	Seat Selection Module: Displays dynamic seat map and handles reservations.
 	•	Payment Module: Performs cost calculations and processes transactions.
 	•	Ticket Confirmation & Delivery Module: Generates and delivers tickets to users.
+
 Test Strategy and Levels
+
 Unit Testing Goal: Verify isolated logic and functions. Examples:
 	•	calculateTotalPrice() returns the correct total.
 	•	validateCardInput() rejects invalid card numbers.
 	•	login validation rejects incorrect credentials. Tools: JUnit, Jest, or any test framework applicable.
+
 Integration Testing Goal: Verify interactions between connected modules. Examples:
 	•	Login to seat selection transition uses session data.
 	•	Seat selection passes seat info correctly to payment.
 	•	Email confirmation receives correct user and ticket data. Tools: Postman, custom integration test scripts.
+
 System Testing Goal: Validate full user workflows, including edge case handling. Examples:
 	•	Movie selection to ticket confirmation flow completes successfully.
 	•	Simulated failure: Payment gateway timeout or race conditions. Tools: Selenium, Cypress, manual browser testing.
+
 Test Sets and Vectors
+
 Unit Test Set 1 – Price Calculation Input: seats = [Regular, ADA], prices = [$12, $10] Expected: Total = $22
+
 Unit Test Set 2 – Credential Validation Input: email = "user@example.com", password = "wrong" Expected: Rejected login with error message
+
 Functional Test Set 1 – Login Behavior Inputs: valid credentials, invalid credentials Expected: Access granted or denied with feedback
+
 Functional Test Set 2 – Seat Selection Logic Inputs: already-booked seat IDs Expected: UI blocks those seats or shows message
+
 System Test Set 1 – Full Booking Workflow Steps: Select movie, select seat, pay, receive ticket Expected: QR code and confirmation screen
+
 System Test Set 2 – Fault Injection Simulate: database timeout or payment failure Expected: User sees an error message, system rolls back or recovers
+
 Diagram Mapping Test coverage aligns with the architecture diagram:
 	•	Unit tests validate internal utility modules
 	•	Functional tests target page-specific features
